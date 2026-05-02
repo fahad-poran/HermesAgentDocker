@@ -1,0 +1,34 @@
+# Secrets
+.env
+hermes_data/.env
+
+# Local auth / credentials
+hermes_data/auth.json
+
+# Runtime locks / pids
+hermes_data/*.pid
+hermes_data/*.lock
+
+# Logs
+hermes_data/logs/
+*.log
+
+# Sessions and request dumps
+hermes_data/sessions/
+
+# Generated caches / state
+hermes_data/cache/
+hermes_data/models_dev_cache.json
+hermes_data/processes.json
+hermes_data/gateway_state.json
+hermes_data/channel_directory.json
+
+# Local tool state / history
+hermes_data/.hermes_history
+hermes_data/.update_check
+hermes_data/skills/.usage.json
+hermes_data/skills/.curator_state
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

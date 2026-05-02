@@ -1,0 +1,1 @@
+Name: Fahad. Working on ERP software using .NET Framework, .NET Core 8, and jQuery.

@@ -1,0 +1,4 @@
+[
+  { "text": "Learn HTML basics", "completed": true },
+  { "text": "Build a todo app", "completed": false }
+]

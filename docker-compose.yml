@@ -1,0 +1,25 @@
+services:
+  hermes:
+    build: .
+    container_name: hermes-agent
+    restart: always
+    volumes:
+      # Use a local directory instead of named volume for easier debugging
+      - ./hermes_data:/root/.hermes
+    environment:
+      #- OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_ALLOWED_USERS=${TELEGRAM_ALLOWED_USERS}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      # Force unbuffered output
+      - PYTHONUNBUFFERED=1
+      - PYTHONIOENCODING=utf8
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    # Add this to see output in real-time
+    stdin_open: true
+    tty: true
+
+# Remove the volumes section if using local directory
+# volumes:
+#   hermes_agent_data:
