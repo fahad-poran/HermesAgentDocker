@@ -33,3 +33,14 @@ Official docs: [https://hermes-agent.nousresearch.com/docs/getting-started/quick
 - **Ollama connection issues** → Not needed here; this setup uses **OpenAI**.
 
 - **Rebuild:** `docker-compose down && docker-compose build --no-cache && docker-compose up -d`
+
+-----======------
+
+After changing any of model , 
+first enter 
+docker exec -it hermes-agent bash
+-> Hermes model
+
+then
+docker-compose restart hermes
+docker-compose logs -f hermes

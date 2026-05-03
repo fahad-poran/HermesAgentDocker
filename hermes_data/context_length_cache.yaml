@@ -1,0 +1,4 @@
+context_lengths:
+  llama3.2:latest@http://host.docker.internal:11434/v1: 131072
+  llama3.2:latest@http://host.docker.internal:11434/v1/: 131072
+  nomic-embed-text:latest@http://host.docker.internal:11434/v1: 8192

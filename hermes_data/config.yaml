@@ -1,10 +1,16 @@
 model:
-  default: nvidia/nemotron-3-super-120b-a12b:free
+  default: tencent/hy3-preview:free
   provider: openrouter
   base_url: https://openrouter.ai/api/v1
+  api_key: ${OPENROUTER_API_KEY}
   api_mode: chat_completions
 providers: {}
-fallback_providers: []
+fallback_providers:
+- provider: custom
+  model: llama3.2:latest
+  from_custom: ollama-local
+  api_mode: chat_completions
+  stream: false
 credential_pool_strategies: {}
 toolsets:
 - hermes-cli
@@ -100,7 +106,7 @@ bedrock:
     trace: disabled
 auxiliary:
   vision:
-    provider: auto
+    provider: main
     model: ''
     base_url: ''
     api_key: ''
@@ -352,6 +358,13 @@ updates:
   pre_update_backup: false
   backup_keep: 5
 _config_version: 23
+custom_providers:
+- name: ollama-local
+  base_url: http://host.docker.internal:11434/v1
+  api_key: ollama
+  models:           # explicitly list available models
+  - llama3.2:latest
+  - nomic-embed-text:latest
 session_reset: {}
 platform_toolsets:
   cli:
