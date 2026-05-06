@@ -47,7 +47,7 @@ docker-compose logs -f hermes
 
 ===============-------------============------------==========
 
-[!DockerN_HarmesImg](Images/docker_hermes_architecture.svg)
+![DockerN_HarmesImg](Images/docker_hermes_architecture.svg)
 
 # Docker & Hermes Agent: Complete Engineering Guide
 
@@ -821,7 +821,7 @@ To deepen your understanding:
 5. Read Docker documentation on multi-stage builds (advanced)
 
 ==================---------------============------------
-[!DockerN_HarmesFlowImg](Images/docker_workflow_timeline.svg)
+![DockerN_HarmesFlowImg](Images/docker_workflow_timeline.svg)
 
 # Docker & Hermes: Quick Command Reference
 
